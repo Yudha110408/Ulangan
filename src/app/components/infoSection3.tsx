@@ -18,7 +18,7 @@ const InfoSection = ({ backgroundMode }: { backgroundMode: 'light' | 'dark' }) =
 
       <div className="md:w-1/2 p-4 flex justify-end relative group">
         <Image
-          src="/img-group2.jpg"
+          src="/img-group3.png"
           alt="Image Group"
           width={700}
           height={700}
