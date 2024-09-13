@@ -24,4 +24,152 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  
+  .text-dark-on-light {
+    color: var(--foreground);
+  }
+  
+  .text-light-on-dark {
+    color: var(--background);
+  }
+}
+
+.navbar-scrolled {
+  background-color: #0000ff; 
+  transition: background-color 0.3s ease;
+}
+
+.navbar-background-blue {
+  background-color: #0000ff; 
+  transition: background-color 0.3s ease;
+}
+
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: 'Lexend Deca';
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff9900; 
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff9900; 
+  transform: scale(1.1); 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); 
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.nav-link:hover {
+  animation: pulse 1.5s infinite;
+}
+
+.hero-button {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #1d4ed8; 
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+
+.hero-input::placeholder {
+  color: #d1d5db; 
+  transition: color 0.3s ease;
+}
+
+.hero-input:focus::placeholder {
+  color: #1d4ed8; 
+}
+
+
+.hero-input {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-input:focus {
+  border-color: #1d4ed8; 
+  box-shadow: 0 0 5px rgba(29, 78, 216, 0.5); 
+}
+
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+@media (min-width: 1024px) {
+  .carousel-slide {
+    width: 300vw; 
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel-slide .card {
+    flex: 1;
+    margin: 0 0.5rem; 
+    width: calc(33.333% - 1rem); 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carousel-slide {
+    width: 200vw; 
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel-slide .card {
+    flex: 1;
+    margin: 0 0.5rem;
+    width: calc(50% - 1rem); 
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-slide {
+    width: 100vw; 
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel-slide .card {
+    margin: 0 auto; 
+    width: calc(100% - 2rem); 
+  }
 }
